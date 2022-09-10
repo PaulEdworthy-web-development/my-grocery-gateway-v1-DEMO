@@ -1,0 +1,149 @@
+:root {
+  --primary: #6ECB63;
+  --secondary: #B1E693;
+  --bg-grey: #E2E2E2;
+  --bg-dark-grey: #333;
+  --grey: #555;
+  --grey-light: #F2F2F2;
+  --white: #FFF;
+}
+
+/* * {
+  outline: 2px solid red;
+} */
+
+/* layout styles */
+body {
+  background: var(--bg-dark-grey);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background: var(--primary);
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* increased specificity to override Materialize styles */
+nav .nav__icon {
+  display: none;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.nav__title {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+/* list styles */
+.list {
+  background: var(--grey-light);
+  margin: 1rem auto;
+  width: 80%;
+  border-radius: 8px;
+  padding: .25rem .5rem;
+  max-width: 450px;
+}
+
+.card {
+  background: var(--grey-light);
+  box-shadow: none !important;
+  color: var(--grey);
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: .5rem auto;
+  padding: 0 .5rem;
+}
+
+.card:active {
+  cursor: grab;
+}
+
+p {
+  color: var(--grey-light);
+}
+
+/* input styles */
+.input__label {
+  font-weight: bold;
+}
+
+.input__text {
+  color: var(--white);
+}
+
+input[type=text]:focus {
+  border-bottom: 2px solid var(--primary) !important;
+}
+
+/* button styles */
+.btn {
+  background: var(--primary);
+  border-radius: 5px;
+  margin: .75rem 0;
+}
+
+.btn:hover {
+  background: var(--primary);
+  cursor: pointer;
+}
+
+.btn:active {
+  background: var(--primary) !important;
+  transform: translateY(5px);
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  .container {
+    width: 400px;
+  }
+
+  nav {
+    height: 100px;
+  }
+
+  /* increased specificity to override Materialize styles */
+  nav .nav__icon {
+    display: inline-block;
+    font-size: 2.5rem;
+  }
+
+  .nav__title {
+    font-size: 2.5rem;
+  }
+
+  .list {
+    margin-top: 20px;
+  }
+
+  .card {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    max-width: 500px;
+  }
+}

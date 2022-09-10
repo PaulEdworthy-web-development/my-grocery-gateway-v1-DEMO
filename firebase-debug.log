@@ -1,0 +1,22 @@
+[debug] [2022-05-08T22:19:41.848Z] ----------------------------------------------------------------------
+[debug] [2022-05-08T22:19:41.850Z] Command:       /home/paul/.nvm/versions/node/v16.14.2/bin/node /home/paul/.nvm/versions/node/v16.14.2/bin/firebase hosting:disable
+[debug] [2022-05-08T22:19:41.851Z] CLI Version:   10.6.0
+[debug] [2022-05-08T22:19:41.851Z] Platform:      linux
+[debug] [2022-05-08T22:19:41.851Z] Node Version:  v16.14.2
+[debug] [2022-05-08T22:19:41.862Z] Time:          Sun May 08 2022 18:19:41 GMT-0400 (Eastern Daylight Saving Time)
+[debug] [2022-05-08T22:19:41.863Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-08T22:19:41.878Z] > refreshing access token with scopes: []
+[debug] [2022-05-08T22:19:41.878Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-08T22:19:42.000Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 08 May 2022 22:19:41 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-08T22:19:42.016Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/undefined [none]
+[debug] [2022-05-08T22:19:42.318Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/undefined 403
+[debug] [2022-05-08T22:19:42.318Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/undefined {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-05-08T22:19:42.319Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-05-08T22:19:42.411Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/home/paul/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/responseToError.js:47:12)
+    at RetryOperation._fn (/home/paul/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project undefined. Please make sure the project exists and your account has permission to access it.

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  <link rel="manifest" href="/manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#6ECB63" />
+  <meta name="theme-color" content="#B1E693" />
+  <title>My Grocery Gateway</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- top nav -->
+    <nav>
+      <div class="nav__title">
+        <i class="fa-solid fa-cart-shopping nav__icon"></i>
+        <a class="nav__title href="/">My <span>Grocery</span>Gateway</a>
+      </div>
+    </nav>
+    <!-- list -->
+    <div class="list"></div>
+
+    <!-- add item -->
+    <div>
+      <form>
+        <div class="divider"></div>
+        <div class="input">
+          <label class="input__label" for="title">Add Item</label>
+          <input placeholder="e.g. Apples" id="item" type="text" class="input__text">
+        </div>
+        <div class="center">
+          <button class="btn btn__add">ADD<button />
+        </div>
+      </form>
+    </div>
+    <p>Drag and drop to reorder list</p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+    integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Import the functions you need from the SDKs you need -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYqCyYpA7sJziN6HXkR_ZmsF_esZoGNsU",
+      authDomain: "my-gg-v1-demo.firebaseapp.com",
+      projectId: "my-gg-v1-demo",
+      storageBucket: "my-gg-v1-demo.appspot.com",
+      messagingSenderId: "533464658950",
+      appId: "1:533464658950:web:e5f40caefc4f2a84f63f87"
+    }
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+    const db = firebase.firestore()
+  </script>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/db.js"></script>
+</body>
+
+</html>
